@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 55vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+    background-image: url("pictures/Nikola\ Timotic\ -\ banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header p {
+    width: 40%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.link {
+    width: fit-content;
+    text-decoration: none;
+    background-color: #187df9;
+    color: #fff;
+    padding: .8rem 1.5rem;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.link-reverse {
+    background-color: #fff;
+    color: #187df9;
+}
+
+.text-picture-section {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-picture-section.reverse {
+    color: #fff;
+    background-color: #187df9;
+}
+
+.reverse img {
+    border: 1px solid #fff;
+}
+
+.text-picture-section img {
+    padding: 10px;
+    border: 1px solid #bebebe;
+    border-radius: 50%;
+}
+
+.text-picture-section-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
