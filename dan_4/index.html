@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" placeholder="Enter user" required>
+        </div>
+        <div>
+            <label for="pass">Password:</label>
+            <input type="password" name="password" id="pass">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="godine">Godine:</label>
+            <input type="number" name="godine" id="godine" step="3" max="100" min="10" value="10">
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone">
+        </div>
+        <div>
+            <label for="datum-rodjenja">Rodjendan:</label>
+            <input type="date" name="datum-rodjenja" id="datum-rodjenja" min="2024-01-01">
+        </div>
+        <div>
+            <label for="vreme">Vreme:</label>
+            <input type="time" name="vreme" id="vreme">
+        </div>
+        <div>
+            <input type="checkbox" id="banana">
+            <label for="banana">Banana</label>
+            <input type="checkbox" id="visnja">
+            <label for="visnja">Visnja</label>
+            <input type="checkbox" id="kajsija">
+            <label for="kajsija">Kajsija</label>
+        </div>
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female">
+        </div>
+        <div>
+            <label for="boja-ociju">Boja ociju:</label>
+            <input type="color" name="boja-ociju" id="boja-ociju">
+        </div>
+        <div>
+            <label for="napomena">Notes:</label>
+            <textarea name="notes" id="napomena" cols="30" rows="10"></textarea>
+        </div>
+        <select name="automobili" id="cars">
+            <option value="default" selected disabled>Choose a car...</option>
+            <optgroup label="Germany">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+            <optgroup label="Japan">
+                <option value="mazda">Mazda</option>
+            </optgroup>
+            <optgroup label="Italy">
+                <option value="alfaRomeo">Alfa Romeo</option>
+            </optgroup>
+        </select>
+        <div>
+            <input type="reset" value="Ocisti formu">
+            <input type="submit" value="Posalji podatke">
+        </div>
+    </form>
+</body>
+</html>
