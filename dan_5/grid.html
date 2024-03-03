@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {  
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "e1 e1 e2 e2 e5"
+                "e1 e1 e2 e2 e5"
+                "e1 e1 e2 e2 e5"
+                "e3 e3 e2 e2 e5"
+                "e3 e3 e6 e6 e5"
+                "e4 e4 e4 e4 e4";
+        }
+
+        .e1 { 
+            grid-area: e1; 
+            background-color: red;
+        }
+        
+        .e2 { 
+            grid-area: e2; 
+            background-color: blue;
+        }
+        
+        .e3 { 
+            grid-area: e3;
+            background-color: black;
+        }
+        
+        .e4 { 
+            grid-area: e4; 
+            background-color: yellow;
+        }
+        
+        .e5 { 
+            grid-area: e5; 
+            background-color: green;
+        }
+        
+        .e6 { 
+            grid-area: e6; 
+            background-color: pink;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="e1">1</div>
+        <div class="e2">2</div>
+        <div class="e3">3</div>
+        <div class="e4">4</div>
+        <div class="e5">5</div>
+        <div class="e6">6</div>
+    </div>
+
+</body>
+
+</html>

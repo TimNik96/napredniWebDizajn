@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        p {
+            padding: 1rem;
+        }
+
+        a {
+            display: block;
+            width: fit-content;
+            padding: .5rem 2.5rem;
+            color: #0d92ff;
+            border: 1px solid #0d92ff;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all .5s ease;
+            /* transition-property: all;
+            transition-duration: .5s;
+            transition-timing-function: ease; */
+        }
+        
+        /* a:hover {
+            transform: scale(-1);
+            background-color: #0d92ff;
+            color: #fff;
+        } */
+
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            transition: all .3s ease;
+            animation-name: loptica;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* animation-fill-mode: ; */
+        }
+        
+        div:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes loptica {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(400px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <p>
+        <a href="#">Link</a>
+    </p>
+    <div>
+
+    </div>
+</body>
+</html>
