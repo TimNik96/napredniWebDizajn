@@ -1,0 +1,44 @@
+@import "variables";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+p {
+    font-size: 2rem;
+    background-color: $main-background;
+}
+
+.p-1 {
+    padding: $main-spacing * .5;
+}
+
+.p-5 {
+    padding: $main-spacing * 3;
+}
+
+.mojaSekcija {
+    padding: $main-spacing;
+
+    
+
+    h1 {
+        color: #f00;
+        width: 50%;
+    }
+    
+    p {
+        color: #fff;
+        width: 50%;
+
+        &:hover {
+            color: #f00;
+        }
+    }
+
+    &:hover {
+        background-color: #ff0;
+    }
+}
