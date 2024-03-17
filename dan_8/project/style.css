@@ -19,6 +19,48 @@
   margin: 0;
 }
 
+.side-menu {
+  background-color: rgba(0, 0, 0, 0.7529411765);
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  left: -300px;
+  transition: all 0.5s ease;
+}
+.side-menu .close {
+  padding: 1rem;
+  text-align: right;
+}
+.side-menu .close svg {
+  width: 30px;
+}
+.side-menu .close svg path {
+  fill: #fff;
+  transition: all 0.3s ease;
+}
+.side-menu .close svg:hover {
+  cursor: pointer;
+}
+.side-menu .close svg:hover path {
+  fill: #999999;
+}
+.side-menu-anchor-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.side-menu-anchor-container a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.side-menu-anchor-container a:hover {
+  color: #999999;
+}
+
 .section-padding {
   padding: 5rem;
 }
@@ -32,6 +74,15 @@
 }
 .header svg {
   width: 40px;
+}
+.header svg path {
+  transition: all 0.3s ease;
+}
+.header svg:hover {
+  cursor: pointer;
+}
+.header svg:hover path {
+  transform: scale(1.05);
 }
 
 .hero {
@@ -78,9 +129,27 @@
 }
 
 .menu-section {
+  position: relative;
   color: #000;
   display: flex;
   align-items: center;
+}
+.menu-section .object-2 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 60vw;
+  height: 200px;
+  background-color: #f1c50e;
+}
+.menu-section .object-3 {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  width: 350px;
+  height: 200px;
+  background-color: #fe7606;
 }
 .menu-section-content {
   width: 100%;
@@ -121,4 +190,150 @@
   width: 250px;
   height: 70px;
   background-color: #000;
+}
+
+.learn-cooking-section {
+  background-image: url("pictures/picture_4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+}
+.learn-cooking-section h2 {
+  color: #fe7606;
+  font-size: 5rem;
+  font-weight: normal;
+}
+.learn-cooking-section > p {
+  width: 35%;
+  text-align: center;
+}
+.learn-cooking-section > p .default-link {
+  text-transform: uppercase;
+}
+.learn-cooking-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.learn-cooking-section-container .learn-cooking-section-item {
+  height: 100%;
+}
+.learn-cooking-section-container .learn-cooking-section-item:first-child,
+.learn-cooking-section-container .learn-cooking-section-item:nth-child(2),
+.learn-cooking-section-container .learn-cooking-section-item:last-child {
+  padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1.5rem;
+}
+.learn-cooking-section-container .learn-cooking-section-item:first-child p:first-child,
+.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) p:first-child,
+.learn-cooking-section-container .learn-cooking-section-item:last-child p:first-child {
+  font-size: 5.5rem;
+}
+.learn-cooking-section-container .learn-cooking-section-item:first-child p:last-child,
+.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) p:last-child,
+.learn-cooking-section-container .learn-cooking-section-item:last-child p:last-child {
+  font-size: 2rem;
+}
+.learn-cooking-section-container .learn-cooking-section-item:first-child h3,
+.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) h3,
+.learn-cooking-section-container .learn-cooking-section-item:last-child h3 {
+  white-space: nowrap;
+  font-size: 2.5rem;
+}
+.learn-cooking-section-container .learn-cooking-section-item:first-child .learn-more,
+.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) .learn-more,
+.learn-cooking-section-container .learn-cooking-section-item:last-child .learn-more {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.learn-cooking-section-container .learn-cooking-section-item:first-child {
+  background-color: #fff;
+  color: #000;
+}
+.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.7529411765);
+  color: #fff;
+}
+.learn-cooking-section-container .learn-cooking-section-item:last-child {
+  background-color: #fe7606;
+  color: #fff;
+}
+.learn-cooking-section-container .learn-cooking-section-item:last-child .learn-more {
+  color: #fff;
+  border-color: #fff;
+}
+.learn-cooking-section-container .learn-cooking-section-item:last-child .learn-more:hover {
+  color: #cccccc;
+  border-color: #cccccc;
+}
+
+.asian-food-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2.5rem;
+}
+.asian-food-section .object-4 {
+  position: absolute;
+  z-index: -5;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  height: 75vh;
+  background-color: #f1c50e;
+}
+.asian-food-section h2 {
+  font-size: 5rem;
+}
+.asian-food-section-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+.asian-food-section-content-container p {
+  font-size: 1.3rem;
+  width: 20%;
+  text-align: center;
+}
+.asian-food-section-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.asian-food-section-image-container div {
+  position: relative;
+  width: 380px;
+  height: 500px;
+}
+.asian-food-section-image-container div::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3137254902);
+  transition: all 0.3s ease;
+}
+.asian-food-section-image-container img {
+  width: 380px;
+  height: 500px;
 }/*# sourceMappingURL=style.css.map */
