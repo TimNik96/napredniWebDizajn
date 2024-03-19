@@ -1,42 +1,30 @@
-// text
-$primary-color: #fff;
-$secondary-color: #000;
-$tertiary-color: #fe7606;
-
-// theme-colors
-
-$primary-background: #f1c50e;
-$secondary-background: #fe7606;
-$light-background: #fff;
-$dark-background: #000;
-$transparent-dark-background: #000000c0;
-$transparent-ligther-background: #00000050;
-
-// font-size
-
-$primary-font: 6rem;
-
-@font-face {
-    font-family: 'Playfair Display';
-    font-style: italic;
-    font-weight: 400 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/playfairdisplay/v37/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 400 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/playfairdisplay/v37/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+@import "variables";
+@import "fonts";
 
 * {
     padding: 0;
     margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $secondary-background;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $primary-background;
+}
+
+body {
+    position: relative;
 }
 
 .side-menu {
@@ -46,18 +34,18 @@ $primary-font: 6rem;
     position: fixed;
     z-index: 999;
     left: -300px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     .close {
         padding: 1rem;
         text-align: right;
-        
+
         svg {
             width: 30px;
-            
+
             path {
                 fill: $light-background;
-                transition: all .3s ease;
+                transition: all 0.3s ease;
             }
 
             &:hover {
@@ -80,32 +68,37 @@ $primary-font: 6rem;
             text-decoration: none;
             font-size: 1.7rem;
             color: $primary-color;
-            transition: all .3s ease;
+            transition: all 0.3s ease;
 
             &:hover {
                 color: darken($primary-color, 40%);
             }
         }
     }
-}   
+}
 
 .section-padding {
     padding: 5rem;
 }
 
 .header {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: $light-background;
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-
     svg {
         width: 40px;
 
         path {
-            transition: all .3s ease;
+            transition: all 0.3s ease;
         }
 
         &:hover {
@@ -119,7 +112,7 @@ $primary-font: 6rem;
 }
 
 .hero {
-    background-image: url("pictures/hero.jpg");
+    background-image: url("../pictures/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -145,14 +138,15 @@ $primary-font: 6rem;
     }
 }
 
-.learn-more, .default-link {
+.learn-more,
+.default-link {
     padding-bottom: 5px;
     color: $tertiary-color;
     text-transform: uppercase;
     text-decoration: none;
     border-bottom: 2px solid $tertiary-color;
     letter-spacing: 2px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
         color: darken($tertiary-color, 15%);
@@ -188,7 +182,6 @@ $primary-font: 6rem;
         width: 350px;
         height: 200px;
         background-color: $secondary-background;
-
     }
 
     &-content {
@@ -197,7 +190,8 @@ $primary-font: 6rem;
         justify-content: center;
         column-gap: 2rem;
 
-        &-item, &-elements {
+        &-item,
+        &-elements {
             width: 25%;
             overflow: hidden;
         }
@@ -206,7 +200,7 @@ $primary-font: 6rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             img {
                 // width: 100%;
                 height: 500px;
@@ -220,7 +214,7 @@ $primary-font: 6rem;
 
         .bottom {
             position: relative;
-            top: 4rem; 
+            top: 4rem;
         }
 
         &-elements {
@@ -236,14 +230,13 @@ $primary-font: 6rem;
                 width: 250px;
                 height: 70px;
                 background-color: $secondary-color;
-
             }
-        }        
+        }
     }
 }
 
 .learn-cooking-section {
-    background-image: url("pictures/picture_4.jpg");
+    background-image: url("../pictures/picture_4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -260,7 +253,7 @@ $primary-font: 6rem;
         font-weight: normal;
     }
 
-    &>p {
+    & > p {
         width: 35%;
         text-align: center;
 
@@ -272,22 +265,13 @@ $primary-font: 6rem;
     &-container {
         display: flex;
         justify-content: center;
-        align-items: center;
         column-gap: 2rem;
 
         .learn-cooking-section-item {
-            height: 100%;
-        }
-
-        .learn-cooking-section-item:first-child,
-        .learn-cooking-section-item:nth-child(2),
-        .learn-cooking-section-item:last-child {
             padding: 3.5rem 2.5rem 2.5rem 2.5rem;
             width: 15%;
-            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             row-gap: 1.5rem;
 
             p:first-child {
@@ -298,29 +282,25 @@ $primary-font: 6rem;
                 font-size: 2rem;
             }
 
-
             h3 {
-                white-space: nowrap;
                 font-size: 2.5rem;
             }
 
             .learn-more {
                 width: fit-content;
             }
-
         }
-
 
         .learn-cooking-section-item:first-child {
             background-color: $primary-color;
             color: $secondary-color;
         }
-        
+
         .learn-cooking-section-item:nth-child(2) {
             background-color: $transparent-dark-background;
             color: $primary-color;
         }
-        
+
         .learn-cooking-section-item:last-child {
             background-color: $secondary-background;
             color: $primary-color;
@@ -344,7 +324,7 @@ $primary-font: 6rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 2.5rem;
+    row-gap: 3rem;
 
     .object-4 {
         position: absolute;
@@ -383,16 +363,21 @@ $primary-font: 6rem;
             position: relative;
             width: 380px;
             height: 500px;
-        }
 
-        div::before {
-            content: "";
-            position: absolute;
-            z-index: 5;
-            width: 100%;
-            height: 100%;
-            background-color: $transparent-ligther-background;
-            transition: all .3s ease;
+            &::before {
+                content: "";
+                cursor: pointer;
+                position: absolute;
+                z-index: 5;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                transition: all 0.3s ease;
+            }
+
+            &:hover::before {
+                background-color: $transparent-ligther-background;
+            }
         }
 
         img {

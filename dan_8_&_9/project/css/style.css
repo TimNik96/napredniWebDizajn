@@ -19,6 +19,27 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fe7606;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f1c50e;
+}
+
+body {
+  position: relative;
+}
+
 .side-menu {
   background-color: rgba(0, 0, 0, 0.7529411765);
   width: 300px;
@@ -66,6 +87,12 @@
 }
 
 .header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
   padding-top: 2rem;
   padding-bottom: 2rem;
   display: flex;
@@ -86,7 +113,7 @@
 }
 
 .hero {
-  background-image: url("pictures/hero.jpg");
+  background-image: url("../pictures/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -109,7 +136,8 @@
   font-size: 1.3rem;
 }
 
-.learn-more, .default-link {
+.learn-more,
+.default-link {
   padding-bottom: 5px;
   color: #fe7606;
   text-transform: uppercase;
@@ -118,7 +146,8 @@
   letter-spacing: 2px;
   transition: all 0.3s ease;
 }
-.learn-more:hover, .default-link:hover {
+.learn-more:hover,
+.default-link:hover {
   color: #b75301;
   border-bottom-color: #b75301;
 }
@@ -193,7 +222,7 @@
 }
 
 .learn-cooking-section {
-  background-image: url("pictures/picture_4.jpg");
+  background-image: url("../pictures/picture_4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -219,43 +248,26 @@
 .learn-cooking-section-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
 }
 .learn-cooking-section-container .learn-cooking-section-item {
-  height: 100%;
-}
-.learn-cooking-section-container .learn-cooking-section-item:first-child,
-.learn-cooking-section-container .learn-cooking-section-item:nth-child(2),
-.learn-cooking-section-container .learn-cooking-section-item:last-child {
   padding: 3.5rem 2.5rem 2.5rem 2.5rem;
   width: 15%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   row-gap: 1.5rem;
 }
-.learn-cooking-section-container .learn-cooking-section-item:first-child p:first-child,
-.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) p:first-child,
-.learn-cooking-section-container .learn-cooking-section-item:last-child p:first-child {
+.learn-cooking-section-container .learn-cooking-section-item p:first-child {
   font-size: 5.5rem;
 }
-.learn-cooking-section-container .learn-cooking-section-item:first-child p:last-child,
-.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) p:last-child,
-.learn-cooking-section-container .learn-cooking-section-item:last-child p:last-child {
+.learn-cooking-section-container .learn-cooking-section-item p:last-child {
   font-size: 2rem;
 }
-.learn-cooking-section-container .learn-cooking-section-item:first-child h3,
-.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) h3,
-.learn-cooking-section-container .learn-cooking-section-item:last-child h3 {
-  white-space: nowrap;
+.learn-cooking-section-container .learn-cooking-section-item h3 {
   font-size: 2.5rem;
 }
-.learn-cooking-section-container .learn-cooking-section-item:first-child .learn-more,
-.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) .learn-more,
-.learn-cooking-section-container .learn-cooking-section-item:last-child .learn-more {
+.learn-cooking-section-container .learn-cooking-section-item .learn-more {
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -286,7 +298,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 2.5rem;
+  row-gap: 3rem;
 }
 .asian-food-section .object-4 {
   position: absolute;
@@ -326,12 +338,16 @@
 }
 .asian-food-section-image-container div::before {
   content: "";
+  cursor: pointer;
   position: absolute;
   z-index: 5;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3137254902);
+  background-color: transparent;
   transition: all 0.3s ease;
+}
+.asian-food-section-image-container div:hover::before {
+  background-color: rgba(0, 0, 0, 0.3137254902);
 }
 .asian-food-section-image-container img {
   width: 380px;
