@@ -1,355 +1,138 @@
-@font-face {
-  font-family: "Playfair Display";
-  font-style: italic;
-  font-weight: 400 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v37/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v37/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 * {
   padding: 0;
   margin: 0;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: none;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #fe7606;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #f1c50e;
 }
 
 body {
   position: relative;
 }
 
-.side-menu {
-  background-color: rgba(0, 0, 0, 0.7529411765);
-  width: 300px;
-  height: 100vh;
+.burgerMenu {
   position: fixed;
-  z-index: 999;
   left: -300px;
-  transition: all 0.5s ease;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.9137254902);
+  justify-content: center;
+  transition: all 0.7s ease;
 }
-.side-menu .close {
-  padding: 1rem;
-  text-align: right;
+.burgerMenu nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.side-menu .close svg {
+.burgerMenu nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+}
+.burgerMenu .svg {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 1rem;
+  transition: all 0.3s ease;
+}
+.burgerMenu .svg svg {
+  width: 20px;
+}
+.burgerMenu .svg svg path {
+  transition: all 0.3s ease;
+}
+.burgerMenu .svg svg:hover {
+  cursor: pointer;
+}
+.burgerMenu .svg svg:hover path {
+  fill: #fff;
+}
+
+header {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: 80%;
+  padding: 2rem 0;
+}
+header svg {
   width: 30px;
 }
-.side-menu .close svg path {
-  fill: #fff;
-  transition: all 0.3s ease;
-}
-.side-menu .close svg:hover {
+header svg:hover {
   cursor: pointer;
 }
-.side-menu .close svg:hover path {
-  fill: #999999;
-}
-.side-menu-anchor-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.side-menu-anchor-container a {
-  text-decoration: none;
-  font-size: 1.7rem;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-.side-menu-anchor-container a:hover {
-  color: #999999;
+header img {
+  width: 60px;
 }
 
-.section-padding {
-  padding: 5rem;
-}
-
-.header {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  z-index: 10;
+.hero-section {
   width: 100%;
-  background-color: #fff;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header svg {
-  width: 40px;
-}
-.header svg path {
-  transition: all 0.3s ease;
-}
-.header svg:hover {
-  cursor: pointer;
-}
-.header svg:hover path {
-  transform: scale(1.05);
+  background-color: #eeeef0;
 }
 
-.hero {
-  background-image: url("../pictures/hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 65vh;
-  display: flex;
-  align-items: end;
-}
-.hero-content {
-  color: #fff;
-  width: 50%;
-}
-.hero-content h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 6rem;
-  line-height: 1;
-}
-.hero-content p {
-  padding: 2rem 0 3.5rem 0;
-  font-family: "Roboto", serif;
-  font-size: 1.3rem;
-}
-
-.learn-more,
-.default-link {
-  padding-bottom: 5px;
-  color: #fe7606;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-bottom: 2px solid #fe7606;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
-}
-.learn-more:hover,
-.default-link:hover {
-  color: #b75301;
-  border-bottom-color: #b75301;
-}
-
-.default-link {
-  border-bottom: none;
-  text-transform: lowercase;
-}
-
-.menu-section {
-  position: relative;
-  color: #000;
-  display: flex;
-  align-items: center;
-}
-.menu-section .object-2 {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 60vw;
-  height: 200px;
-  background-color: #f1c50e;
-}
-.menu-section .object-3 {
-  position: absolute;
-  top: 35%;
-  right: 0;
-  width: 350px;
-  height: 200px;
-  background-color: #fe7606;
-}
-.menu-section-content {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-.menu-section-content-item, .menu-section-content-elements {
-  width: 25%;
-  overflow: hidden;
-}
-.menu-section-content-item {
+.text-picture-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
+  margin: auto;
 }
-.menu-section-content-item img {
-  height: 500px;
-}
-.menu-section-content .top {
-  position: relative;
-  bottom: 5rem;
-}
-.menu-section-content .bottom {
-  position: relative;
-  top: 4rem;
-}
-.menu-section-content-elements {
-  display: flex;
-  flex-direction: column;
-  row-gap: 3rem;
-}
-.menu-section-content-elements h2 {
-  font-size: 6rem;
-}
-.menu-section-content-elements .object-1 {
-  width: 250px;
-  height: 70px;
-  background-color: #000;
-}
-
-.learn-cooking-section {
-  background-image: url("../pictures/picture_4.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #fff;
+.text-picture-section-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   row-gap: 2rem;
 }
-.learn-cooking-section h2 {
-  color: #fe7606;
-  font-size: 5rem;
-  font-weight: normal;
-}
-.learn-cooking-section > p {
-  width: 35%;
-  text-align: center;
-}
-.learn-cooking-section > p .default-link {
-  text-transform: uppercase;
-}
-.learn-cooking-section-container {
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-.learn-cooking-section-container .learn-cooking-section-item {
-  padding: 3.5rem 2.5rem 2.5rem 2.5rem;
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-}
-.learn-cooking-section-container .learn-cooking-section-item p:first-child {
-  font-size: 5.5rem;
-}
-.learn-cooking-section-container .learn-cooking-section-item p:last-child {
+.text-picture-section-content h3 {
   font-size: 2rem;
 }
-.learn-cooking-section-container .learn-cooking-section-item h3 {
-  font-size: 2.5rem;
-}
-.learn-cooking-section-container .learn-cooking-section-item .learn-more {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.learn-cooking-section-container .learn-cooking-section-item:first-child {
-  background-color: #fff;
-  color: #000;
-}
-.learn-cooking-section-container .learn-cooking-section-item:nth-child(2) {
-  background-color: rgba(0, 0, 0, 0.7529411765);
-  color: #fff;
-}
-.learn-cooking-section-container .learn-cooking-section-item:last-child {
-  background-color: #fe7606;
-  color: #fff;
-}
-.learn-cooking-section-container .learn-cooking-section-item:last-child .learn-more {
-  color: #fff;
-  border-color: #fff;
-}
-.learn-cooking-section-container .learn-cooking-section-item:last-child .learn-more:hover {
-  color: #cccccc;
-  border-color: #cccccc;
-}
-
-.asian-food-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 3rem;
-}
-.asian-food-section .object-4 {
-  position: absolute;
-  z-index: -5;
-  right: 0;
-  top: 0;
-  width: 50vw;
-  height: 75vh;
-  background-color: #f1c50e;
-}
-.asian-food-section h2 {
+.text-picture-section-content h1 {
   font-size: 5rem;
 }
-.asian-food-section-content-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
+.text-picture-section-content p {
+  font-size: 1.5rem;
 }
-.asian-food-section-content-container p {
-  font-size: 1.3rem;
-  width: 20%;
-  text-align: center;
+.text-picture-section-image img {
+  width: 700px;
 }
-.asian-food-section-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+
+.read-more {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  background-color: #332f29;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
 }
-.asian-food-section-image-container div {
+
+.free-anchor {
+  padding-bottom: 0.1rem;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+.beginner-section {
+  padding: 8rem 0;
+}
+.beginner-section .text-picture-section {
+  flex-direction: row-reverse;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+.beginner-section .text-picture-section-image {
   position: relative;
-  width: 380px;
-  height: 500px;
 }
-.asian-food-section-image-container div::before {
-  content: "";
-  cursor: pointer;
+.beginner-section .text-picture-section-image .shape {
   position: absolute;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  transition: all 0.3s ease;
+  z-index: -5;
+  width: 500px;
+  height: 500px;
+  background-color: #8bc9ba;
+  border-radius: 50%;
+  top: -30px;
+  left: -30px;
 }
-.asian-food-section-image-container div:hover::before {
-  background-color: rgba(0, 0, 0, 0.3137254902);
-}
-.asian-food-section-image-container img {
-  width: 380px;
+.beginner-section .text-picture-section-image img {
+  border-radius: 50%;
+  width: 500px;
   height: 500px;
 }/*# sourceMappingURL=style.css.map */

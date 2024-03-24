@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+}
+
+.burgerMenu {
+    position: fixed;
+    left: -300px;
+    width: 300px;
+    background-color: #000000e9;
+    justify-content: center;
+    transition: all 0.7s ease;
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.3rem;
+        }
+    }
+
+    .svg {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 1rem;
+        transition: all 0.3s ease;
+        
+        svg {
+            width: 20px;
+
+            path {
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:hover path {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+header {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 80%;
+    padding: 2rem 0;
+
+    svg {
+        width: 30px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    img {
+        width: 60px;
+    }
+}
+
+.hero-section {
+    width: 100%;
+    background-color: #eeeef0;
+}
+
+.text-picture-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 2rem;
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    &-image {
+
+        img {
+            width: 700px;
+        }
+    }
+}
+
+.read-more {
+    width: fit-content;
+    color: #fff;
+    background-color: #332f29;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+}
+
+.free-anchor {
+    padding-bottom: .1rem;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    
+}
+
+.beginner-section {
+    padding: 8rem 0;
+
+    .text-picture-section {
+        flex-direction: row-reverse;
+        column-gap: 3rem;
+    }
+
+    .text-picture-section-image {
+        position:  relative;
+
+        .shape {
+            position: absolute;
+            z-index: -5;
+            width: 500px;
+            height: 500px;
+            background-color: #8bc9ba;
+            border-radius: 50%;
+            top: -30px;
+            left: -30px;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 500px;
+            height: 500px;
+        }
+    }
+}
