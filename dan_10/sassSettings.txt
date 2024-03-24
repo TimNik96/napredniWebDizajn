@@ -1,0 +1,9 @@
+"liveSassCompile.settings.formats": [
+    {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/dan_10/css"
+    }
+]
+
+// Podesavanja se dodaju u Settings.json file
