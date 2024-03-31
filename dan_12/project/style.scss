@@ -1,0 +1,56 @@
+$filter-color: #00000087;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.hero-section {
+    background-image: url("../pictures/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+
+    .filter {
+        background-color: $filter-color;
+    }
+
+    .row {
+        row-gap: 2rem;
+    }
+}
+
+.link {
+    width: fit-content;
+    transition: all .3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.people-section {
+    img {
+        width: 280px;
+    }
+}
+
+.social {
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    &-container {
+        column-gap: 1rem;
+
+        & > div {
+            column-gap: 1rem;
+
+            & > div {
+                border-width: 10px !important;
+            }
+        }
+    }
+}

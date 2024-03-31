@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section {
+  background-image: url("../pictures/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+.hero-section .filter {
+  background-color: rgba(0, 0, 0, 0.5294117647);
+}
+.hero-section .row {
+  row-gap: 2rem;
+}
+
+.link {
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+.link:hover {
+  transform: scale(1.05);
+}
+
+.people-section img {
+  width: 280px;
+}
+
+.social svg {
+  width: 40px;
+  height: 40px;
+}
+.social-container {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.social-container > div {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.social-container > div > div {
+  border-width: 10px !important;
+}/*# sourceMappingURL=style.css.map */
